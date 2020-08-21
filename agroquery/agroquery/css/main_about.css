@@ -1,0 +1,277 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-weight: 400px;
+    
+    
+}
+.header_top {
+    background: none repeat scroll 0 0 #F0F0E9;
+}
+
+h1{
+    text-align: center;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+.header_top {
+    background: none repeat scroll 0 0 #F0F0E9;
+}
+
+
+#slider {
+    padding-bottom: 45px;
+}
+
+.carousel-indicators li {
+    background: #C4C4BE;
+}
+
+.carousel-indicators li.active {
+    background: #FE980F;
+}
+
+.carousel-inner { text-align: center; }
+.carousel .item > img { display: inline-block; }
+
+.item {
+    padding-left: 100px;
+}
+
+
+
+
+.item h1 span {
+    color: #FE980F;
+
+}
+
+
+.control-carousel {
+    position: absolute;
+    top: 50%;
+    font-size: 60px;
+    color: #C2C2C1;
+    padding: 50px;
+}
+
+
+.right {
+    right: 0;
+}
+
+/* Control de Header*/
+
+a {
+    cursor: pointer;
+}
+header {
+   
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(14, 2, 105, 0.8);
+}
+.nav-container {
+    width: 1280px;
+    margin: auto;
+}
+.nav-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+}
+.tab-nav {
+    outline: none;
+    display: none;
+}
+.tab-nav-label {
+    display: none;
+    color: #fff;
+}
+.tab-content {
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tab-content li {
+    display: inline-block;
+    padding-right: 10px;
+}
+.tab-content li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+.tab-content li a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+.tab-content li a:hover::before {
+    transform: scale(1,1);
+}
+.tab-content li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+.tab-content li a:hover::after {
+    transform: scale(1,1);
+}
+
+@media screen and (max-width: 1280px) {
+    .nav-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .tab-nav-label {
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .tab-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.4s;
+        -o-transition: all ease-in-out 0.4s;
+        -webkit-transition: all ease-in-out 0.4s;
+     }
+    .nav-checkbox input:checked ~ .tab-content {
+        max-height: 400px;
+    }
+    .tab-content li {
+        padding: 10px 0;
+    }
+}
+
+
+/* Hasta aqui el header*/ 
+
+/*Inicio del Footer*/
+.footer{
+    background: rgba(0, 0, 0, 0) url("https://campusvirtual.unah.edu.hn/theme/image.php/bootstrapcampus/theme/1562887133/frontpage-bg") no-repeat scroll 0px bottom / cover;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+}
+  
+
+/* Finaliza EL Footer*/
+
+/* Inicio del contenido Principal*/ 
+
+
+.content {
+    
+    width: 70%;
+    background: #fff;
+    margin: auto;
+    padding: 10px;
+    
+
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr  180px;
+    grid-template-rows: repeat(2,auto);
+
+    grid-template-areas: "main  main"
+                         "main-2 main-2"
+                         
+  
+}
+
+.content .main, .content > div ,
+ .content  .div-photos{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 11px 13px 11px -9px rgb(240, 237, 240);
+}
+
+.content .main h1, .content .main-2 h1 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(41, 0, 153);
+}
+
+.content .main{
+    display: grid;
+    grid-gap: 15px;
+    font-size: 25px;
+    text-align: justify;
+    
+    background: rgba(231, 225, 225, 0.1);
+    grid-area: main;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  
+}
+
+.content .main .ft-2 {
+    justify-self: center;
+    align-self: center;
+}
+
+.content .main-2{
+    display: grid;
+    grid-gap: 15px;
+    font-size: 25px;
+    text-align: justify;
+    
+    background: rgba(231, 225, 225, 0.1);
+    grid-area: main-2;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  
+}
+
+.content .main-2 .ft-2 {
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+
+.content .div-photos >div{
+    background:rgba(214, 188, 188,0.1);
+    
+}
